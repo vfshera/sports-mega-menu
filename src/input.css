@@ -5,3 +5,7 @@
 .site-container {
   @apply mx-auto my-7 lg:max-w-[1170px];
 }
+
+* {
+  box-sizing: border-box;
+}
