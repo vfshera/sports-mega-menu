@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.site-container {
+  @apply mx-auto my-7 lg:max-w-[1170px];
+}
