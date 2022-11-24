@@ -11,3 +11,19 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+
+.sub-menu-link {
+  @apply text-sm;
+}
+
+.sub-menu-link a::before {
+  content: ">";
+  color: inherit;
+  margin-right: 5px;
+  font-size: 10px;
+}
+.dropdown > a::after {
+  content: ">";
+  color: inherit;
+  margin-left: 5px;
+}
