@@ -26,6 +26,15 @@ body {
   font-size: 10px;
 }
 
+.dropdown-toggle::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f078";
+  color: inherit;
+  margin-left: 5px;
+  font-size: 10px;
+}
+
 [data-dropdown-open="false"] .dropdown-menu {
   @apply hidden;
 }
@@ -33,5 +42,11 @@ body {
   @apply block;
 }
 [data-dropdown-open="true"] .dropdown-toggle {
-  @apply bg-primary-1 text-white w-full block;
+  @apply bg-primary-1 text-white  w-max;
+}
+
+@media screen and (max-width: 768px) {
+  [data-dropdown-open="true"] .dropdown-toggle {
+    @apply block w-full;
+  }
 }

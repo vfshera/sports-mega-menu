@@ -51,7 +51,7 @@
           </div>
           <ul
             id="MainNav"
-            class="hidden md:flex flex-col py-3 md:py-0 md:px-10 md:flex-row md:gap-2 lg:gap-8"
+            class="hidden md:flex flex-col py-3 md:py-0 md:px-5 w-full md:flex-row md:gap-1.5 lg:gap-8"
           >
             <!-- Home Menu Link Starts -->
             <li
@@ -69,8 +69,8 @@
                 href="#"
                 class="dropdown-toggle text-sm lg:text-base font-semibold transition-all group-hover:bg-primary-1 px-5 md:px-2 lg:px-3 py-3 group-hover:text-white h-full"
                 data-toggle="dropdown"
-                >By Player <i class="fa fa-chevron-down"></i
-              ></a>
+                >By Player
+              </a>
               <!-- By Player Dropdown Starts -->
               <ul
                 class="dropdown-menu md:hidden group-hover:block md:absolute top-[100%]"
@@ -87,7 +87,7 @@
                           Browse Players by First Letter of Last Name
                         </h6>
                         <ul
-                          class="list-alphabets-mega flex items-center gap-1 flex-wrap"
+                          class="list-alphabets-mega flex items-center gap-1 flex-wrap lg:flex-nowrap"
                         >
                           <li
                             class="border border-white p-2 leading-none text-white"
@@ -224,7 +224,9 @@
                     </div>
                     <!-- Browser By First Letter of Last Name Ends -->
                     <!-- Clearfix Starts -->
-                    <div class="grid grid-cols-2 gap-4 md:gap-0 md:grid-cols-4">
+                    <div
+                      class="grid grid-cols-2 gap-4 md:gap-0 md:grid-cols-4 w-max"
+                    >
                       <!-- Col #1 Starts -->
                       <div class="">
                         <h6 class="text-primary-2">Most Popular</h6>
@@ -381,8 +383,8 @@
                 href="#"
                 class="dropdown-toggle text-sm lg:text-base font-semibold group-hover:bg-primary-1 px-5 md:px-2 lg:px-3 py-3 group-hover:text-white"
                 data-toggle="dropdown"
-                >By Set <i class="fa fa-chevron-down"></i
-              ></a>
+                >By Set
+              </a>
               <!-- By Set Dropdown Starts -->
               <ul
                 class="dropdown-menu md:hidden group-hover:block md:absolute top-[100%]"
@@ -467,8 +469,8 @@
                 href="#"
                 class="dropdown-toggle text-sm lg:text-base font-semibold group-hover:bg-primary-1 px-5 md:px-2 lg:px-3 py-3 group-hover:text-white"
                 data-toggle="dropdown"
-                >By College <i class="fa fa-chevron-down"></i
-              ></a>
+                >By College
+              </a>
               <!-- By College Dropdown Starts -->
               <ul
                 class="dropdown-menu md:hidden group-hover:block md:absolute top-[100%]"
@@ -578,8 +580,8 @@
                 href="#"
                 class="dropdown-toggle text-sm lg:text-base font-semibold group-hover:bg-primary-1 px-5 md:px-2 lg:px-3 py-3 group-hover:text-white"
                 data-toggle="dropdown"
-                >By Team <i class="fa fa-chevron-down"></i
-              ></a>
+                >By Team
+              </a>
               <!-- By Team Dropdown Starts -->
               <ul
                 class="dropdown-menu md:hidden group-hover:block md:absolute top-[100%]"
@@ -752,8 +754,8 @@
                 href="#"
                 class="dropdown-toggle text-sm lg:text-base font-semibold group-hover:bg-primary-1 px-5 md:px-2 lg:px-3 py-3 group-hover:text-white"
                 data-toggle="dropdown"
-                >Team Sets <i class="fa fa-chevron-down"></i
-              ></a>
+                >Team Sets
+              </a>
               <!-- Team Sets Dropdown Starts -->
               <ul
                 class="dropdown-menu md:hidden group-hover:block md:absolute top-[100%]"
@@ -926,8 +928,8 @@
                 href="#"
                 class="dropdown-toggle text-sm lg:text-base font-semibold group-hover:bg-primary-1 px-5 md:px-2 lg:px-3 py-3 group-hover:text-white"
                 data-toggle="dropdown"
-                >Site Menu <i class="fa fa-chevron-down"></i
-              ></a>
+                >Site Menu
+              </a>
               <!-- Site Menu Dropdown Starts -->
               <ul
                 class="dropdown-menu md:hidden group-hover:block md:absolute top-[100%]"
@@ -1021,10 +1023,10 @@
         /* CONTENT */
       </div>
       <!-- FOOTER -->
-      <footer>
+      <footer class="hidden md:block">
         <!-- links -->
         <section
-          class="links px-8 py-10 grid grid-cols-3 lg:grid-cols-6 gap-8"
+          class="links px-8 py-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
           style="background-image: url('/public/images/footer-bg.jpg')"
         >
           <div class="link-group text-[#202020]">
