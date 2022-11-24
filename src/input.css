@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .site-container {
-  @apply mx-auto my-7 md:max-w-[750px] lg:max-w-[1170px];
+  @apply m-2.5 md:mx-auto md:my-7 md:max-w-[750px] lg:max-w-[1170px];
 }
 
 body {
@@ -15,15 +15,12 @@ body {
 .sub-menu-link {
   @apply text-sm;
 }
-
-.sub-menu-link a::before {
-  content: ">";
+.sub-menu-link a::before,
+.footer-link::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f054";
   color: inherit;
   margin-right: 5px;
   font-size: 10px;
-}
-.dropdown > a::after {
-  content: ">";
-  color: inherit;
-  margin-left: 5px;
 }
