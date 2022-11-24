@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -23,4 +24,11 @@ body {
   color: inherit;
   margin-right: 5px;
   font-size: 10px;
+}
+
+[data-dropdown-open="false"] .dropdown-menu {
+  @apply hidden;
+}
+[data-dropdown-open="true"] .dropdown-menu {
+  @apply block;
 }

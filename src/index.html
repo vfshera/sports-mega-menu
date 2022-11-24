@@ -9,6 +9,8 @@
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css"
     />
     <title>Football Cards</title>
+
+    <script src="./index.js" defer></script>
   </head>
   <body class="bg-primary-1">
     <div class="site-container">
@@ -19,25 +21,38 @@
         >
           <img src="/public/images/logo.png" alt="logo" />
 
-          <div class="flex items-center gap-2 justify-between w-full md:w-2/5">
-            <form action="" class="flex items-center flex-1">
+          <div class="flex items-center gap-3 justify-between w-full md:w-2/5">
+            <form action="" class="flex items-center flex-1 overflow-hidden">
               <input
                 type="text"
                 placeholder="Search"
-                class="border-gray-300 border focus:outline-none px-2 py-1 w-4/5"
+                class="border-gray-300 border focus:outline-none h-10 px-2 py-1 w-5/6"
               />
-              <button class="bg-indigo-500 w-1/5 h-full">si</button>
+              <button class="bg-[#595dc1] h-10 px-3 flex-1">
+                <i class="fa-solid fa-magnifying-glass text-white"></i>
+              </button>
             </form>
 
             <button
-              class="uppercase px-2 md:px-5 py-2 border border-[#202020]/20"
+              class="uppercase px-2 md:px-5 h-10 border text-sm hover:border-transparent hover:bg-[#595dc1] transition-colors duration-300 hover:text-white font-['Roboto_Condensed'] border-[#202020]/20"
             >
               view cart
             </button>
           </div>
         </header>
-        <nav class="bg-primary-2 rounded-b-lg mb-5 flex px-3 py-0 md:px-10">
-          <ul class="flex flex-col md:flex-row md:gap-2 lg:gap-8">
+        <nav class="bg-primary-2 rounded-b-lg mb-5 flex flex-col md:flex-row">
+          <div
+            class="mobile-toggle-wrapper md:hidden p-3 flex justify-end border-b border-black/10"
+          >
+            <!-- mobile toggle -->
+            <button id="NavToggle" class="p-1">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <ul
+            id="MainNav"
+            class="hidden md:flex flex-col py-3 md:py-0 px-3 md:px-10 md:flex-row md:gap-2 lg:gap-8"
+          >
             <!-- Home Menu Link Starts -->
             <li
               class="hover:text-primary-1 text-sm lg:text-base px-2 lg:px-3 py-1 md:py-3 font-semibold text-primary-1"
@@ -46,7 +61,10 @@
             </li>
             <!-- Home Menu Link Ends -->
             <!-- By Player Menu Link Starts -->
-            <li class="dropdown relative py-1 md:py-3 group">
+            <li
+              data-dropdown-open="false"
+              class="dropdown relative py-1 md:py-3 group"
+            >
               <a
                 href="#"
                 class="dropdown-toggle text-sm lg:text-base font-semibold group-hover:bg-primary-1 px-2 lg:px-3 py-3 group-hover:text-white h-full"
@@ -55,7 +73,7 @@
               ></a>
               <!-- By Player Dropdown Starts -->
               <ul
-                class="dropdown-menu hidden group-hover:block absolute top-[100%]"
+                class="dropdown-menu md:hidden group-hover:block absolute top-[100%]"
               >
                 <li>
                   <!-- Mega Menu Content Starts -->
@@ -353,7 +371,10 @@
             </li>
             <!-- By Player Menu Link Ends -->
             <!-- By Set Menu Link Starts -->
-            <li class="dropdown relative py-1 md:py-3 group">
+            <li
+              data-dropdown-open="false"
+              class="dropdown relative py-1 md:py-3 group"
+            >
               <a
                 href="#"
                 class="dropdown-toggle text-sm lg:text-base font-semibold group-hover:bg-primary-1 px-2 lg:px-3 py-3 group-hover:text-white"
@@ -362,7 +383,7 @@
               ></a>
               <!-- By Set Dropdown Starts -->
               <ul
-                class="dropdown-menu hidden group-hover:block absolute top-[100%]"
+                class="dropdown-menu md:hidden group-hover:block absolute top-[100%]"
               >
                 <li>
                   <!-- Mega Menu Content Starts -->
@@ -436,7 +457,10 @@
             </li>
             <!-- By Set Menu Link Ends -->
             <!-- By College Menu Link Starts -->
-            <li class="dropdown relative py-1 md:py-3 group">
+            <li
+              data-dropdown-open="false"
+              class="dropdown relative py-1 md:py-3 group"
+            >
               <a
                 href="#"
                 class="dropdown-toggle text-sm lg:text-base font-semibold group-hover:bg-primary-1 px-2 lg:px-3 py-3 group-hover:text-white"
@@ -445,7 +469,7 @@
               ></a>
               <!-- By College Dropdown Starts -->
               <ul
-                class="dropdown-menu hidden group-hover:block absolute top-[100%]"
+                class="dropdown-menu md:hidden group-hover:block absolute top-[100%]"
               >
                 <li>
                   <!-- Mega Menu Content Starts -->
@@ -544,7 +568,10 @@
             </li>
             <!-- By College Menu Link Ends -->
             <!-- By Team Menu Link Starts -->
-            <li class="dropdown relative py-1 md:py-3 group">
+            <li
+              data-dropdown-open="false"
+              class="dropdown relative py-1 md:py-3 group"
+            >
               <a
                 href="#"
                 class="dropdown-toggle text-sm lg:text-base font-semibold group-hover:bg-primary-1 px-2 lg:px-3 py-3 group-hover:text-white"
@@ -553,7 +580,7 @@
               ></a>
               <!-- By Team Dropdown Starts -->
               <ul
-                class="dropdown-menu hidden group-hover:block absolute top-[100%]"
+                class="dropdown-menu md:hidden group-hover:block absolute top-[100%]"
               >
                 <li>
                   <!-- Mega Menu Content Starts -->
@@ -715,7 +742,10 @@
             </li>
             <!-- By Team Menu Link Ends -->
             <!-- Team Sets Menu Link Starts -->
-            <li class="dropdown relative py-1 md:py-3 group">
+            <li
+              data-dropdown-open="false"
+              class="dropdown relative py-1 md:py-3 group"
+            >
               <a
                 href="#"
                 class="dropdown-toggle text-sm lg:text-base font-semibold group-hover:bg-primary-1 px-2 lg:px-3 py-3 group-hover:text-white"
@@ -724,7 +754,7 @@
               ></a>
               <!-- Team Sets Dropdown Starts -->
               <ul
-                class="dropdown-menu hidden group-hover:block absolute top-[100%]"
+                class="dropdown-menu md:hidden group-hover:block absolute top-[100%]"
               >
                 <li>
                   <!-- Mega Menu Content Starts -->
@@ -886,7 +916,10 @@
             </li>
             <!-- Team Sets Menu Link Ends -->
             <!-- Site Menu Menu Link Starts -->
-            <li class="dropdown relative py-1 md:py-3 group">
+            <li
+              data-dropdown-open="false"
+              class="dropdown relative py-1 md:py-3 group"
+            >
               <a
                 href="#"
                 class="dropdown-toggle text-sm lg:text-base font-semibold group-hover:bg-primary-1 px-2 lg:px-3 py-3 group-hover:text-white"
@@ -895,7 +928,7 @@
               ></a>
               <!-- Site Menu Dropdown Starts -->
               <ul
-                class="dropdown-menu hidden group-hover:block absolute top-[100%]"
+                class="dropdown-menu md:hidden group-hover:block absolute top-[100%]"
               >
                 <li>
                   <!-- Mega Menu Content Starts -->
@@ -989,38 +1022,59 @@
       <footer>
         <!-- links -->
         <section
-          class="links bg-white px-8 py-10 grid grid-cols-3 lg:grid-cols-6 gap-8"
+          class="links px-8 py-10 grid grid-cols-3 lg:grid-cols-6 gap-8"
+          style="background-image: url('/public/images/footer-bg.jpg')"
         >
           <div class="link-group text-[#202020]">
             <!-- Title Starts -->
-            <h5 class="font-bold text-lg mb-2">Football Cards</h5>
+            <h5 class="font-bold font-['Roboto_Condensed'] text-lg mb-2">
+              Football Cards
+            </h5>
             <!-- Title Ends -->
             <!-- Links Starts -->
             <ul
               class="footer-links border-t border-dashed pt-3 border-[#202020]"
             >
               <li>
-                <a href="#" class="footer-link text-xs"
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
                   >Football Card Singles</a
                 >
               </li>
               <li>
-                <a href="#" class="footer-link text-xs"
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
                   >Football Cards by Set</a
                 >
               </li>
               <li>
-                <a href="#" class="footer-link text-xs">Football Team Sets</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Football Team Sets</a
+                >
               </li>
               <li>
-                <a href="#" class="footer-link text-xs">Football Player Lots</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Football Player Lots</a
+                >
               </li>
-              <li><a href="#" class="footer-link text-xs">Cards by Team</a></li>
               <li>
-                <a href="#" class="footer-link text-xs">Cards by College</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Cards by Team</a
+                >
               </li>
-              <li><a href="#" class="footer-link text-xs">Other Sports</a></li>
-              <li><a href="#" class="footer-link text-xs">Graded Cards</a></li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Cards by College</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Other Sports</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Graded Cards</a
+                >
+              </li>
             </ul>
             <!-- Links Ends -->
           </div>
@@ -1028,27 +1082,43 @@
           <!-- Site Information Starts -->
           <div class="link-group text-[#202020]">
             <!-- Title Starts -->
-            <h5 class="font-bold text-lg mb-2">Site Information</h5>
+            <h5 class="font-bold font-['Roboto_Condensed'] text-lg mb-2">
+              Site Information
+            </h5>
             <!-- Title Ends -->
             <!-- Links Starts -->
             <ul
               class="footer-links border-t border-dashed pt-3 border-[#202020]"
             >
               <li>
-                <a href="#" class="footer-link text-xs">View Shopping Cart</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >View Shopping Cart</a
+                >
               </li>
               <li>
-                <a href="#" class="footer-link text-xs">Checkout Order</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Checkout Order</a
+                >
               </li>
               <li>
-                <a href="#" class="footer-link text-xs">Advanced Search</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Advanced Search</a
+                >
               </li>
               <li>
-                <a href="#" class="footer-link text-xs">My Watchlist Login</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >My Watchlist Login</a
+                >
               </li>
-              <li><a href="#" class="footer-link text-xs">Contact Us</a></li>
               <li>
-                <a href="#" class="footer-link text-xs">Privacy Policy</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Privacy Policy</a
+                >
               </li>
             </ul>
             <!-- Links Ends -->
@@ -1058,28 +1128,34 @@
           <!-- Other Pages Starts -->
           <div class="link-group text-[#202020]">
             <!-- Title Starts -->
-            <h5 class="font-bold text-lg mb-2">Other Pages</h5>
+            <h5 class="font-bold font-['Roboto_Condensed'] text-lg mb-2">
+              Other Pages
+            </h5>
             <!-- Title Ends -->
             <!-- Links Starts -->
             <ul
               class="footer-links border-t border-dashed pt-3 border-[#202020]"
             >
               <li>
-                <a href="#" class="footer-link text-xs"
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
                   >Football Card Gallery</a
                 >
               </li>
               <li>
-                <a href="#" class="footer-link text-xs"
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
                   >Football Hall of Fame</a
                 >
               </li>
               <li>
-                <a href="#" class="footer-link text-xs"
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
                   >Football Card History</a
                 >
               </li>
-              <li><a href="#" class="footer-link text-xs">Other Sites</a></li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Other Sites</a
+                >
+              </li>
             </ul>
             <!-- Links Ends -->
           </div>
@@ -1088,24 +1164,48 @@
           <!-- Popular Players Starts -->
           <div class="link-group text-[#202020]">
             <!-- Title Starts -->
-            <h5 class="font-bold text-lg mb-2">Popular Players</h5>
+            <h5 class="font-bold font-['Roboto_Condensed'] text-lg mb-2">
+              Popular Players
+            </h5>
             <!-- Title Ends -->
             <!-- Links Starts -->
             <ul
               class="footer-links border-t border-dashed pt-3 border-[#202020]"
             >
-              <li><a href="#" class="footer-link text-xs">Dan Marino</a></li>
-              <li><a href="#" class="footer-link text-xs">Joe Montana</a></li>
               <li>
-                <a href="#" class="footer-link text-xs">Peyton Manning</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Dan Marino</a
+                >
               </li>
-              <li><a href="#" class="footer-link text-xs">Brett Favre</a></li>
               <li>
-                <a href="#" class="footer-link text-xs">Emmitt Smith</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Joe Montana</a
+                >
               </li>
-              <li><a href="#" class="footer-link text-xs">Tom Brady</a></li>
               <li>
-                <a href="#" class="footer-link text-xs">Barry Sanders</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Peyton Manning</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Brett Favre</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Emmitt Smith</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Tom Brady</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Barry Sanders</a
+                >
               </li>
             </ul>
             <!-- Links Ends -->
@@ -1115,32 +1215,48 @@
           <!-- Recent Additions Starts -->
           <div class="link-group text-[#202020]">
             <!-- Title Starts -->
-            <h5 class="font-bold text-lg mb-2">Recent Additions</h5>
+            <h5 class="font-bold font-['Roboto_Condensed'] text-lg mb-2">
+              Recent Additions
+            </h5>
             <!-- Title Ends -->
             <!-- Links Starts -->
             <ul
               class="footer-links border-t border-dashed pt-3 border-[#202020]"
             >
-              <li><a href="#" class="footer-link text-xs">2022 Score</a></li>
-              <li><a href="#" class="footer-link text-xs">2021 Select</a></li>
               <li>
-                <a href="#" class="footer-link text-xs"
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >2022 Score</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >2021 Select</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
                   >2022 Panini Studio Rookies</a
                 >
               </li>
               <li>
-                <a href="#" class="footer-link text-xs">2022 Prestige</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >2022 Prestige</a
+                >
               </li>
               <li>
-                <a href="#" class="footer-link text-xs">2021 Donruss Optic</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >2021 Donruss Optic</a
+                >
               </li>
               <li>
-                <a href="#" class="footer-link text-xs"
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
                   >2021 Panini Chronicles</a
                 >
               </li>
               <li>
-                <a href="#" class="footer-link text-xs">2022 Panini Legacy</a>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >2022 Panini Legacy</a
+                >
               </li>
             </ul>
             <!-- Links Ends -->
@@ -1150,15 +1266,29 @@
           <!-- Social Links Starts -->
           <div class="link-group text-[#202020]">
             <!-- Title Starts -->
-            <h5 class="font-bold text-lg mb-2">Social Links</h5>
+            <h5 class="font-bold font-['Roboto_Condensed'] text-lg mb-2">
+              Social Links
+            </h5>
             <!-- Title Ends -->
             <!-- Links Starts -->
             <ul
               class="footer-links border-t border-dashed pt-3 border-[#202020]"
             >
-              <li><a href="#" class="footer-link text-xs">Facebook</a></li>
-              <li><a href="#" class="footer-link text-xs">Twitter</a></li>
-              <li><a href="#" class="footer-link text-xs">Instagram</a></li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a href="#" class="footer-link hover:text-primary-1 text-xs"
+                  >Instagram</a
+                >
+              </li>
             </ul>
             <!-- Links Ends -->
           </div>
@@ -1166,7 +1296,7 @@
 
         <!-- copyright -->
         <section
-          class="copyright bg-[#202020] flex flex-col items-center p-5 gap-1 rounded-b-lg text-white text-xs"
+          class="copyright bg-[#202020] flex flex-col font-['Open_Sans'] items-center px-5 py-7 leading-6 rounded-b-lg text-white text-xs"
         >
           2001-2022 Nexmark, Inc.
           <p class="text-center">
