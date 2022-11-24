@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .site-container {
-  @apply mx-auto my-7 lg:max-w-[1170px];
+  @apply mx-auto my-7 md:max-w-[750px] lg:max-w-[1170px];
 }
 
 body {
