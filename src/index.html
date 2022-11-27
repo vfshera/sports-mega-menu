@@ -1019,8 +1019,12 @@
 
       <!-- CONTENT AREA -->
 
-      <section class="grid grid-cols-4 gap-8 bg-white p-5 rounded-t-lg">
-        <aside class="col-span-1 flex flex-col gap-5">
+      <section
+        class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-4 gap-8 bg-white p-5 rounded-t-lg"
+      >
+        <aside
+          class="hidden md:col-span-2 lg:col-span-1 md:flex flex-col gap-5"
+        >
           <!-- CARD -->
           <div class="flex flex-col font-['Roboto_Condensed']">
             <div
@@ -1127,7 +1131,7 @@
           </div>
           <!-- SOCIALCARD END -->
         </aside>
-        <main class="col-span-3 pb-16">
+        <main class="md:col-span-4 lg:col-span-3 pb-16">
           <!-- LETTERS -->
           <div class="flex flex-col gap-4">
             <div
@@ -1136,7 +1140,7 @@
               Browse Football Cards - Singles by Player (By First Letter of Last
               Name)
             </div>
-            <ul class="alphabet flex items-center gap-1 flex-wrap">
+            <ul class="alphabet hidden lg:flex items-center gap-1 flex-wrap">
               <li
                 class="border border-gray-200 p-2 leading-none text-[#313131] font-semibold hover:bg-primary-1 hover:text-white hover:border-transparent transition-colors cursor-pointer"
               >
@@ -1268,6 +1272,65 @@
                 <a href="#Z">Z</a>
               </li>
             </ul>
+            <select
+              name="firstLetter"
+              class="lg:hidden px-4 py-2 text-sm rounded-md bg-white text-gray-600 border border-black/30 focus:border-[#66afe9]"
+            >
+              <option value="" disabled>
+                Select First Letter of Last Name
+              </option>
+              <option value="A">A</option>
+
+              <option value="B">B</option>
+
+              <option value="C">C</option>
+
+              <option value="D">D</option>
+
+              <option value="E">E</option>
+
+              <option value="F">F</option>
+
+              <option value="G">G</option>
+
+              <option value="H">H</option>
+
+              <option value="I">I</option>
+
+              <option value="J">J</option>
+
+              <option value="K">K</option>
+
+              <option value="L">L</option>
+
+              <option value="M">M</option>
+
+              <option value="N">N</option>
+
+              <option value="O">O</option>
+
+              <option value="P">P</option>
+
+              <option value="Q">Q</option>
+
+              <option value="R">R</option>
+
+              <option value="S">S</option>
+
+              <option value="T">T</option>
+
+              <option value="U">U</option>
+
+              <option value="V">V</option>
+
+              <option value="W">W</option>
+
+              <option value="X">X</option>
+
+              <option value="Y">Y</option>
+
+              <option value="Z">Z</option>
+            </select>
           </div>
 
           <!-- RELEASES -->
@@ -1281,23 +1344,23 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-3">
               <!-- RELEASE -->
               <div
-                class="release-card py-5 px-2 border border-black/20 flex gap-5"
+                class="release-card md:py-5 px-1 md:px-2 border border-black/20 flex gap-5"
               >
-                <div class="release-img w-1/4">
+                <div class="release-img w-1/2 md:w-1/4">
                   <img
                     src="/public/images/2022sageartistry.jpg"
                     alt="Sage Artistry"
-                    class="w-[95px]"
+                    class="w-[169px] md:w-[95px]"
                   />
                 </div>
-                <div class="flex flex-col w-3/4">
+                <div class="flex flex-col pr-2 w-1/2 py-4 md:py-0 md:w-3/4">
                   <a
                     href="#"
                     class="text-base font-medium text-primary-1 font-['Roboto_Condensed']"
                     >2022 Sage Artistry</a
                   >
                   <hr class="h-[2px] bg-primary-1" />
-                  <p class="text-sm mt-2 text-[#3a3a3a]">
+                  <p class="text-xs md:text-sm mt-2 text-[#3a3a3a]">
                     The 2022 SAGE Artistry football card set consists of 120
                     cards. It contains cards of the top rookies and also some
                     top college stars. Some of the players include Kenny
@@ -1307,23 +1370,23 @@
               </div>
               <!-- RELEASE -->
               <div
-                class="release-card py-5 px-2 border border-black/20 flex gap-5"
+                class="release-card md:py-5 px-1 md:px-2 border border-black/20 flex gap-5"
               >
-                <div class="release-img w-1/4">
+                <div class="release-img w-1/2 md:w-1/4">
                   <img
                     src="/public/images/2022paniniinstantsupernova.jpg"
                     alt="2022 Panini Instant Supernova"
-                    class="w-[95px]"
+                    class="w-[169px] md:w-[95px]"
                   />
                 </div>
-                <div class="flex flex-col w-3/4">
+                <div class="flex flex-col pr-2 w-1/2 py-4 md:py-0 md:w-3/4">
                   <a
                     href="#"
                     class="text-base font-medium text-primary-1 font-['Roboto_Condensed']"
                     >2022 Panini Instant Supernova</a
                   >
                   <hr class="h-[2px] bg-primary-1" />
-                  <p class="text-sm mt-2 text-[#3a3a3a]">
+                  <p class="text-xs md:text-sm mt-2 text-[#3a3a3a]">
                     The 2022 Panini Instant Supernova set consists of 24 cards.
                     It includes cards of Patrick Mahomes, Tom Brady, Justin
                     Herbert and rookies such as Kenny Pickett, Malik Willis,
@@ -1334,23 +1397,23 @@
               </div>
               <!-- RELEASE -->
               <div
-                class="release-card py-5 px-2 border border-black/20 flex gap-5"
+                class="release-card md:py-5 px-1 md:px-2 border border-black/20 flex gap-5"
               >
-                <div class="release-img w-1/4">
+                <div class="release-img w-1/2 md:w-1/4">
                   <img
                     src="/public/images/2022score.jpg"
                     alt="2022 Score"
-                    class="w-[95px]"
+                    class="w-[169px] md:w-[95px]"
                   />
                 </div>
-                <div class="flex flex-col w-3/4">
+                <div class="flex flex-col pr-2 w-1/2 py-4 md:py-0 md:w-3/4">
                   <a
                     href="#"
                     class="text-base font-medium text-primary-1 font-['Roboto_Condensed']"
                     >2022 Score</a
                   >
                   <hr class="h-[2px] bg-primary-1" />
-                  <p class="text-sm mt-2 text-[#3a3a3a]">
+                  <p class="text-xs md:text-sm mt-2 text-[#3a3a3a]">
                     The 2022 Score football card set consists of 400 cards.
                     There are 300 veteran and legends cards and 100 rookie
                     cards. Top rookies include Kenny Pickett, Bailey Zappe,
@@ -1360,23 +1423,23 @@
               </div>
               <!-- RELEASE -->
               <div
-                class="release-card py-5 px-2 border border-black/20 flex gap-5"
+                class="release-card md:py-5 px-1 md:px-2 border border-black/20 flex gap-5"
               >
-                <div class="release-img w-1/4">
+                <div class="release-img w-1/2 md:w-1/4">
                   <img
                     src="/public/images/2021select.jpg"
                     alt="2022 Select"
-                    class="w-[95px]"
+                    class="w-[169px] md:w-[95px]"
                   />
                 </div>
-                <div class="flex flex-col w-3/4">
+                <div class="flex flex-col pr-2 w-1/2 py-4 md:py-0 md:w-3/4">
                   <a
                     href="#"
                     class="text-base font-medium text-primary-1 font-['Roboto_Condensed']"
                     >2021 Select</a
                   >
                   <hr class="h-[2px] bg-primary-1" />
-                  <p class="text-sm mt-2 text-[#3a3a3a]">
+                  <p class="text-xs md:text-sm mt-2 text-[#3a3a3a]">
                     The 2021 Select football card set consists of 425 cards with
                     different levels of rarity. Top rookies include Trevor
                     Lawrence, Justin Fields, Najee Harris and more.
@@ -1385,23 +1448,23 @@
               </div>
               <!-- RELEASE -->
               <div
-                class="release-card py-5 px-2 border border-black/20 flex gap-5"
+                class="release-card md:py-5 px-1 md:px-2 border border-black/20 flex gap-5"
               >
-                <div class="release-img w-1/4">
+                <div class="release-img w-1/2 md:w-1/4">
                   <img
                     src="/public/images/2022paniniinstantstudiorookies.jpg"
                     alt="2022 Panini Studio Rookies"
-                    class="w-[95px]"
+                    class="w-[169px] md:w-[95px]"
                   />
                 </div>
-                <div class="flex flex-col w-3/4">
+                <div class="flex flex-col pr-2 w-1/2 py-4 md:py-0 md:w-3/4">
                   <a
                     href="#"
                     class="text-base font-medium text-primary-1 font-['Roboto_Condensed']"
                     >2022 Panini Studio Rookies</a
                   >
                   <hr class="h-[2px] bg-primary-1" />
-                  <p class="text-sm mt-2 text-[#3a3a3a]">
+                  <p class="text-xs md:text-sm mt-2 text-[#3a3a3a]">
                     The 2022 Panini Instant Studio Rookies set consists of 42
                     cards. It has the top rookies of the 2022 class including
                     Kenny Pickett, Bailey Zappe and more. Only 911 cards were
@@ -1411,23 +1474,23 @@
               </div>
               <!-- RELEASE -->
               <div
-                class="release-card py-5 px-2 border border-black/20 flex gap-5"
+                class="release-card md:py-5 px-1 md:px-2 border border-black/20 flex gap-5"
               >
-                <div class="release-img w-1/4">
+                <div class="release-img w-1/2 md:w-1/4">
                   <img
                     src="/public/images/2022prestige.jpg"
                     alt="2022 Prestige"
-                    class="w-[95px]"
+                    class="w-[169px] md:w-[95px]"
                   />
                 </div>
-                <div class="flex flex-col w-3/4">
+                <div class="flex flex-col pr-2 w-1/2 py-4 md:py-0 md:w-3/4">
                   <a
                     href="#"
                     class="text-base font-medium text-primary-1 font-['Roboto_Condensed']"
                     >2022 Prestige</a
                   >
                   <hr class="h-[2px] bg-primary-1" />
-                  <p class="text-sm mt-2 text-[#3a3a3a]">
+                  <p class="text-xs md:text-sm mt-2 text-[#3a3a3a]">
                     The 2022 Prestige football card set consists of 400 cards.
                     There are 300 base veteran and legends cards and 100 rookie
                     cards. Top rookies include Kenny Pickett, Breece Hall, Drake
