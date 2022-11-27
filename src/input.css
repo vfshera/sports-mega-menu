@@ -17,7 +17,8 @@ body {
   @apply text-sm;
 }
 .sub-menu-link a::before,
-.footer-link::before {
+.footer-link::before,
+.card-link::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f054";
